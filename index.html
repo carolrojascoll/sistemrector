@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RectorApp</title>
+    <link rel="icon" type="image/png" href="img/RectorApp.png">
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="css/toastr.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex justify-content-center mt-5">
+        <div class="card w-25">
+          <div class="card-hearder text-center">
+            <img src="img/Logo_UNC.png" alt="Logo" class="logo"> <!-- Ruta de tu imagen de logo -->
+            <h3 class="titulo">Inicio de Sesión</h3>
+          </div>
+          <div class="card-body">
+            <form action="#" id="form_login" autocomplete="off">
+              <div class="input-group mt-3">
+                <span class="input-group-text"><i class="fa fa-user"></i></span>
+                <input
+                  type="text"
+                  name="usuario"
+                  id="usuario"
+                  class="form-control"
+                  autocomplete="off"
+                  placeholder="Usuario"
+                  maxlength="20"
+                  autofocus
+                />
+              </div>  
+              <div class="mt-2 input-group">
+                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  id="password"
+                  placeholder="Contraseña"
+                  maxlength="30"
+                />
+                <button class="btn btn-primary border-0" type="button" id="hide-show"
+                 onclick="mostrarPassword('password', 'icono')">
+                  <i class="fa fa-eye icono fw-bold"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer text-center">
+            <button id="btn_acceder" class="btn btn-success" onclick="validarAcceso();">
+              INGRESAR
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/toastr.js"></script>
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>
