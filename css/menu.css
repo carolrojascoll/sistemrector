@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    height: 100%;
+    background-image: url('../img/main_background.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
+}
+
+.nav-icon {
+  background-image: url('../img/main_background.jpg'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: end;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    color: white; /* Texto blanco en el pie de página */
+    padding: 10px; /* Añade espaciado alrededor del contenido del pie de página */
+}
+
+.footer p, .footer strong {
+    margin-top: 40px; /* Espaciado entre los párrafos y elementos <strong> en el pie de página */
+}
+
+.footer img {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+#main_content {
+    margin-right: 10px;
+}
+
+.clock {
+    font-family: "Share Tech Mono", monospace;
+    color: black;
+    width: 100%;
+}
+
+#time {
+    letter-spacing: 0.05em;
+    font-size: 18px;
+    color: black;
+    margin-right: 20px;
+}
+
+#main {
+    margin-top: 75px;
+}
+
+.font {
+    font-size: 14px;
+}
+
+.offcanvas {
+    transition: transform 0.3s ease; /* Transición suave para el cambio de posición */
+}
+
+.offcanvas-body {
+    transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+/* Estilo para la imagen del usuario */
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Hace que la imagen tenga forma circular */
+    border: 2px solid white; /* Agrega un borde blanco */
+    object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    object-position: center; /* Centra la imagen dentro del contenedor */
+}
+
+
+/* Estilo para la tabla */
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  /* #tabla_ciudades th,
+  #tabla_ciudades td {
+    padding: 8px;
+    text-align: left;
+  } */
+  
+/* Estilo para los botones */
+  .btn-primary,
+  .btn-danger,
+  .btn-secondary {
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 16px;
+    margin: 5px;
+    font-family: 'Segoe UI' !important;
+  }
+  
+  /* Estilo para el modal */
+  .modal-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-footer {
+    padding: 20px;
+  }
+  
+/* Estilo para el botón Nuevo */
+#btn_nuevo {
+    /* background-color: #03045e; Cambiar el color de fondo a verde */
+    color: #fff; /* Cambiar el color del texto a blanco */
+    transition: all 0.3s; /* Agregar una transición suave */
+  }
+  
+/* Estilo cuando el cursor está sobre el botón Nuevo */
+  #btn_nuevo, .editar:hover {
+    transform: scale(1.05); /* Agrandar un poco el botón */
+    /* box-shadow: 0 4px 8px rgba(23, 180, 31, 0.1); Agregar una sombra suave */
+    /* background-color: #cad2c5; Cambiar el color de fondo a rojo brillante */
+    /* color: #000; */
+  }
+  
+/* Estilo para el botón Salir */
+.btn-danger {
+    /* background-color: #dc3545; Cambiar el color de fondo a rojo */
+    color: #fff; /* Cambiar el color del texto a blanco */
+    transition: all 0.3s; /* Agregar una transición suave */
+    outline: none; /* Quitar el borde predeterminado */
+  }
+  
+/* Estilo para el botón Salir */
+.btn-secondary {
+    /* background-color: #dc3545; Cambiar el color de fondo a rojo */
+    transition: all 0.3s; /* Agregar una transición suave */
+    outline: none; /* Quitar el borde predeterminado */
+  }
+  
+/* Estilo cuando el cursor está sobre el botón Salir */
+  .btn-secondary:hover {
+    transform: scale(1.05); /* Agrandar un poco el botón */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agregar una sombra suave */
+    background-color: #ff0000; /* Cambiar el color de fondo a rojo brillante */
+  }
+  
+/* Estilo para la ventana modal */
+.modal {
+  opacity: 0; /* Inicialmente ocultar la ventana modal */
+  visibility: hidden; /* Inicialmente ocultar la ventana modal */
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Agregar una transición suave */
+}
+
+/* Estilo para mostrar la ventana modal */
+.modal.show {
+  opacity: 1; /* Cambiar la opacidad para mostrar la ventana */
+  visibility: visible; /* Hacer visible la ventana modal */
+  transition-delay: 0s; /* Retrasar la transición para que se ejecute de inmediato */
+}
+
+/* Estilo para ocultar la ventana modal */
+.modal.hide {
+  opacity: 0; /* Cambiar la opacidad para ocultar la ventana modal */
+  visibility: hidden; /* Hacer invisible la ventana modal */
+  transition: opacity 0.3s ease; /* Agregar una transición suave */
+}
+
+/* Estilo para el botón de cierre de la ventana modal */
+.modal .btn-close {
+  color: #fff; /* Color blanco para el botón de cierre */
+}
+
+  
+/* Estilo para el navbar */
+.navbar {
+  background-color: rgba(248, 249, 250, 0.9); /* Color de fondo del navbar con opacidad */
+  border-bottom: 1px solid #013366; /* Borde inferior del navbar */
+}
+
+/* Estilo para el menú offcanvas */
+.offcanvas-header {
+  background: linear-gradient(to bottom, rgba(2, 0, 90, 0.986), rgba(0, 10, 90, 0.979)); /* Degradado azul marino con opacidad */
+  color: #fff; /* Color del texto del encabezado del menú offcanvas */
+}
+
+/* Estilo para el botón de cierre del menú offcanvas */
+.offcanvas-header .btn-close {
+  color: #ffffff; /* Color del botón de cierre del menú offcanvas */
+}
+
+/* Estilo para la transición de apertura del menú offcanvas */
+.offcanvas-start {
+  transition: transform 0.5s ease; /* Ajustamos la duración y la función de suavizado de la transición */
+}
+
+/* Estilo para la transición de cierre del menú offcanvas */
+.offcanvas-start.hide {
+  transition: transform 0.5s ease; /* Ajustamos la duración y la función de suavizado de la transición */
+}
+
+
+/* Estilo para el texto "Sistema de Rectorado" */
+.navbar-brand {
+  opacity: 0; /* Establece la opacidad inicial en 0 */
+  transform: translateX(-20px); /* Desplaza el texto hacia la izquierda */
+  animation: fadeInLeft 0.5s ease forwards; /* Agrega una animación de aparición */
+
+  /* Ajusta el tamaño y la familia de la fuente según sea necesario */
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+/* Animación de aparición */
+@keyframes fadeInLeft {
+  from {
+      opacity: 0; /* Comienza con una opacidad de 0 */
+      transform: translateX(-20px); /* Comienza con un desplazamiento hacia la izquierda */
+  }
+  to {
+      opacity: 1; /* Termina con una opacidad de 1 */
+      transform: translateX(0); /* Termina sin desplazamiento */
+  }
+}
+
+#user_perfil {
+  cursor: pointer;
+}
+
+.btn {
+  color: #fff;
+}
